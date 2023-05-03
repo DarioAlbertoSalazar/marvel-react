@@ -6,8 +6,12 @@ import Series from "./pages/Series";
 import Comics from "./pages/Comics";
 import Error404 from "./pages/Error404";
 import Header from "./components/Header";
+import useFetch from "./hooks/useFetch";
 
 function App() {
+  const exampleApi = useFetch(
+    "http://gateway.marvel.com/v1/public/comics?ts=1&apikey=8d48fc782ffb3a22a5b46801df703a13&hash=876cdc2a6437b0f03db9840e63d21cfd"
+  );
   return (
     <div>
       <BrowserRouter>
